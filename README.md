@@ -53,10 +53,13 @@ compatibility matrix + agent leaderboard
 - [Agent contract](AGENTS.md) — rules for verified autonomous runs.
 - [Contributing](CONTRIBUTING.md) — contribution tracks and PR expectations.
 - [RX 9070 XT baseline plan](docs/BASELINE_PLAN.md) — the first ~20-task reference suite.
+- [Site prototype](site/index.html) — benchmark-first light UI inspired by serious public benchmark sites.
 
 ## First milestone — M0
 
-Build a small RX 9070 XT baseline suite of known passing and failing CUDA workloads, then prove that at least one agent can take a failing test, produce a patch, and make the real GPU verifier turn it green.
+1. Establish a simple 10–20 workload RX 9070 XT pass/fail baseline.
+2. Pick one small failure.
+3. Prove one agent-authored red → green fix on the real GPU without regressions.
 
 **M0 exit condition:** one complete autonomous red → green cycle with reproducible evidence and no regression.
 
@@ -73,7 +76,13 @@ CUDArena does not treat “CUDA compatibility” as one vague percentage. Result
 - cost/time
 - correctness and performance
 
-A headline score may exist later, but the raw compatibility matrix must remain visible.
+A headline score may exist, but the raw compatibility matrix must remain visible.
+
+## Website direction
+
+The product UI is intentionally **benchmark-first, light, restrained, and data-dense** rather than a neon/gaming dashboard. The prototype lives in `site/` and includes a leaderboard, filters/search, recent runs, benchmark categories, and summary metrics.
+
+**Important:** the current website numbers and model rows are placeholder demo data only. They must not be presented as measured CUDArena results. Real values replace them only after the reference baseline and verifier exist.
 
 ## Current status
 
@@ -82,13 +91,14 @@ A headline score may exist later, but the raw compatibility matrix must remain v
 | Project definition | ✅ |
 | Benchmark specification | ✅ |
 | RX 9070 XT baseline design | ✅ |
+| Benchmark-first site prototype | ✅ |
 | First reproducible task set | ⏳ |
 | GPU verifier | ⏳ |
 | First verified autonomous fix | ⏳ |
 | Distributed runners | Later |
-| Public arena / leaderboard | Later |
+| Public verified leaderboard | Later |
 
-The immediate goal is to prove the agent → patch → RX 9070 XT → verified result loop before building the larger CUDArena website.
+The immediate engineering goal remains **Issue #1: establish the real RX 9070 XT baseline**. The site can mature in parallel, but measured data wins over presentation.
 
 ## License
 
