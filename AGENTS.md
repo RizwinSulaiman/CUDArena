@@ -1,6 +1,6 @@
 # Agent-first contribution contract
 
-Warp2Wave is designed to measure and improve autonomous software-engineering capability while producing useful CUDA-on-AMD compatibility work.
+CUDArena is designed to measure and improve autonomous software-engineering capability while producing useful CUDA-on-AMD compatibility work.
 
 ## Verified agent runs
 
